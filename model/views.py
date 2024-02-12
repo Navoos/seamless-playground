@@ -15,7 +15,6 @@ def translate_audio_view(request):
 				if form.is_valid():
 						# Process the audio file
 						lang = request.data['target']
-						print(request.data['target'])
 						translated_audio = translate_audio(request.FILES['file'], request.POST.get("target", None))
 						file_path = "/Users/yakhoudr/goinfre/seamless-playground/translated_audio.wav"
 						f = open(file_path, "rb") 
